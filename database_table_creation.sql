@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[bookings](
     [room_id] [int] NOT NULL,
     [staff_id] [int] NOT NULL,
     [start_time] [datetime] NOT NULL,
-    [end_time] [datetime] NOT NULL
+    [duration] [int] NOT NULL
 );
 GO
 
@@ -27,7 +27,7 @@ CREATE TABLE [dbo].[staff](
 	[staff_id] [int] IDENTITY(1,1) NOT NULL,
 	[first_name] [varchar] (40) NOT NULL,
 	[last_name] [varchar] (40) NOT NULL,
-	[role] [varchar] (40) NOT NULL
+	[job] [varchar] (40) NOT NULL
 );
 GO
 
