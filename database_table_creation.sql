@@ -27,12 +27,22 @@ CREATE TABLE [dbo].[staff](
 	[staff_id] [int] IDENTITY(1,1) NOT NULL,
 	[first_name] [varchar] (40) NOT NULL,
 	[last_name] [varchar] (40) NOT NULL,
-	[job] [varchar] (40) NOT NULL
+	[job_id] [int] NOT NULL
 );
 GO
 
 ALTER TABLE dbo.staff
 ADD CONSTRAINT [PK_staff] PRIMARY KEY CLUSTERED ([staff_id] ASC);
+GO
+
+CREATE TABLE [dbo].[jobs](
+	[job_id] [int] IDENTITY(1,1) NOT NULL,
+	[job_title] [varchar] (40) NOT NULL
+);
+GO
+
+ALTER TABLE dbo.jobs
+ADD CONSTRAINT [PK_jobs] PRIMARY KEY CLUSTERED ([job_id] ASC);
 GO
 
 CREATE TABLE [dbo].[rooms](
@@ -78,6 +88,12 @@ ALTER TABLE dbo.bookings  WITH CHECK ADD  CONSTRAINT [FK_bookings_staff] FOREIGN
 REFERENCES dbo.staff ([staff_id])
 GO
 ALTER TABLE dbo.bookings CHECK CONSTRAINT [FK_bookings_staff]
+GO
+
+ALTER TABLE dbo.staff  WITH CHECK ADD  CONSTRAINT [FK_staff_jobs] FOREIGN KEY([job_id])
+REFERENCES dbo.jobs ([job_id])
+GO
+ALTER TABLE dbo.staff CHECK CONSTRAINT [FK_staff_jobs]
 GO
 
 ALTER TABLE dbo.rooms  WITH CHECK ADD  CONSTRAINT [FK_rooms_offices] FOREIGN KEY([office_id])
