@@ -1,13 +1,14 @@
 use RoomBookingDB;
 GO
 
-CREATE PROCEDURE [dbo].[sp_GetBookingsInRange]
+CREATE FUNCTION [dbo].[fu_GetBookingsInRange](
 @StartDate datetime = '2023-02-23T00:00:00',
 @EndDate datetime   = '2023-03-23T11:00:00',
 @RoomType int = 1,
 @Office int = 1
-AS
-BEGIN
+)
+RETURNS TABLE
+AS RETURN
 SELECT dbo.bookings.booking_id, dbo.staff.first_name, dbo.staff.last_name, dbo.bookings.description, dbo.bookings.start_time, dbo.rooms.room_name, dbo.room_types.type, dbo.offices.city
 FROM dbo.bookings FULL JOIN dbo.rooms
 ON dbo.bookings.room_id = dbo.rooms.room_id
@@ -21,7 +22,6 @@ WHERE dbo.bookings.start_time BETWEEN @StartDate AND @EndDate
 AND dbo.room_types.room_type_id = @RoomType
 AND dbo.offices.office_id = @Office
 
-END
 GO
 
 -- 2023-02-22T00:00:00
