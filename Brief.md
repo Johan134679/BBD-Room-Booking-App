@@ -1,10 +1,9 @@
 # Group Project Brief 
 
 ## Members 
-
-- Manav Vanani 
+ 
 - johannes Barnard
-- Kajal Patil
+- Khuthadzo Nemauluma
 - Thomas Stevens
 
 ## Database Requirements  
