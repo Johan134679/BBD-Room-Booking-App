@@ -69,7 +69,7 @@ GO
 
 CREATE TABLE [dbo].[offices](
 	[office_id] [int] IDENTITY(1,1) NOT NULL,
-	[city] [varchar] (40) NOT NULL
+	[city] [varchar] (85) NOT NULL
 );
 GO
 
