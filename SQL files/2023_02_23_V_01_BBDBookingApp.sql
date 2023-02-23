@@ -114,3 +114,178 @@ GO
 
 
 
+--Views 
+--Create Views 
+
+--View to get all the bookings for the AMS branch, and relevant info
+
+DROP VIEW IF EXISTS vBookingsAMS;
+GO
+CREATE VIEW vBookingsAMS
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration,
+city
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'Amsterdam'
+AND start_date > GETDATE()
+GO
+
+--View to get all the bookings for the CPT branch, and relevant info
+DROP VIEW IF EXISTS vBookingsCPT;
+GO
+CREATE VIEW vBookingsCPT
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'Cape Town'
+AND start_date > GETDATE()
+GO
+
+--View to get all the bookings for the JHB branch, and relevant info
+DROP VIEW IF EXISTS vBookingsJHB;
+GO
+CREATE VIEW vBookingsJHB
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'Johannesburg'
+AND start_date > GETDATE()
+GO
+
+--View to get all the bookings for the LON branch, and relevant info
+DROP VIEW IF EXISTS vBookingsLON;
+GO
+CREATE VIEW vBookingsLON
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'London'
+AND start_date > GETDATE()
+GO
+
+--View to get all the bookings for the PTA branch, and relevant info
+DROP VIEW IF EXISTS vBookingsPTA;
+GO
+CREATE VIEW vBookingsPTA
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration,
+city
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'Pretoria'
+AND start_date > GETDATE()
+GO
+
+--View to get all the bookings for the Pune branch, and relevant info
+DROP VIEW IF EXISTS vBookingsPune;
+GO
+CREATE VIEW vBookingsPune
+AS
+SELECT booking_id, 
+first_name, 
+last_name, 
+room_name, 
+start_date, 
+duration
+FROM dbo.bookings 
+LEFT JOIN dbo.rooms
+ON
+dbo.bookings.room_id = dbo.rooms.room_id
+LEFT JOIN dbo.staff
+ON
+dbo.bookings.staff_id = dbo.staff.staff_id
+LEFT JOIN dbo.offices
+ON
+dbo.offices.office_id = dbo.rooms.office_id
+WHERE dbo.offices.city = 'Pune'
+AND start_date > GETDATE()
+GO
+
+--Procedures 
+
+DROP PROCEDURE IF EXISTS [dbo].[uspRoomTypesPerOffice]
+
+GO
+
+CREATE PROCEDURE [dbo].[uspRoomTypesPerOffice]
+	@office_id int =1,
+	@type_id int =1
+AS
+	
+	SELECT COUNT(*) FROM [dbo].[udfRoomTypesPerOffice](@office_id, @type_id)
+GO
+
+--Functions 
+
+
+
+
