@@ -63,20 +63,20 @@ INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Cobie', 'Smulders
 INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Alyson', 'Hannigan', 2);
 INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Jason', 'Segel', 6); --17
 
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 1, 1, '2023-03-05T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 1, 4, '2023-03-06T15:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 18, 2, '2023-03-07T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 4, 3, '2023-03-09T09:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 2, 10, '2023-03-01T10:30:00', 30);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 5, 11, '2023-03-13T10:30:00', 30);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 22, 15, '2023-03-13T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 12, 6, '2023-04-01T14:30:00', 60); --
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 1, 1, '2023-03-05T09:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Stand-up', 21, 9, '2023-03-06T10:30:00', 30);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 6, 5, '2023-05-07T07:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 4, 3, '2023-05-09T09:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 8, 10, '2023-06-01T10:30:00', 30);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 9, 11, '2023-06-01T10:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 22, 15, '2023-05-01T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Stand-up', 12, 6, '2023-04-01T14:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Conference call', 1, 1, '2023-03-05', '14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 1, 4, '2023-03-06', '15:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 18, 2, '2023-03-07', '14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 4, 3, '2023-03-09', '09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Peer programming', 2, 10, '2023-03-01', '10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Peer programming', 5, 11, '2023-03-13', '10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Conference call', 22, 15, '2023-03-13', '14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Conference call', 12, 6,  '2023-04-01', '14:30:00', 60); --
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 1, 1, '2023-03-05', '09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Stand-up', 21, 9, '2023-03-06', '10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 6, 5, '2023-05-07', '07:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 4, 3, '2023-05-09', '09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Peer programming', 8, 10, '2023-06-01', '10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Peer programming', 9, 11, '2023-06-01', '10:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Conference call', 22, 15, '2023-05-01', '14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_date, start_time, duration) VALUES ('Stand-up', 12, 6, '2023-04-01', '14:30:00', 30);
 

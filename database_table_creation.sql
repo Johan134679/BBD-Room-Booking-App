@@ -58,7 +58,7 @@ ALTER TABLE dbo.rooms
 ADD CONSTRAINT [PK_rooms] PRIMARY KEY CLUSTERED ([room_id] ASC);
 GO
 
-CREATE TABLE [dbo].[RoomTypes](
+CREATE TABLE [dbo].[room_types](
 	[room_type_id] [int] IDENTITY(1,1) NOT NULL,
 	[type] [varchar] (120) NOT NULL
 );
