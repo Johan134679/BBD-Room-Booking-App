@@ -7,8 +7,9 @@ SELECT booking_id,
 first_name, 
 last_name, 
 room_name, 
-start_time, 
-duration
+start_date, 
+duration,
+city
 FROM dbo.bookings 
 LEFT JOIN dbo.rooms
 ON
@@ -20,5 +21,5 @@ LEFT JOIN dbo.offices
 ON
 dbo.offices.office_id = dbo.rooms.office_id
 WHERE dbo.offices.city = 'Amsterdam'
-AND start_time > GETDATE()
+AND start_date > GETDATE()
 GO
