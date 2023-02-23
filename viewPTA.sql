@@ -1,14 +1,15 @@
---View to get all the bookings for the JHB branch, and relevant info
-DROP VIEW IF EXISTS vBookingsJHB;
+--View to get all the bookings for the PTA branch, and relevant info
+DROP VIEW IF EXISTS vBookingsPTA;
 GO
-CREATE VIEW vBookingsJHB
+CREATE VIEW vBookingsPTA
 AS
 SELECT booking_id, 
 first_name, 
 last_name, 
 room_name, 
 start_time, 
-duration
+duration,
+city
 FROM dbo.bookings 
 LEFT JOIN dbo.rooms
 ON
@@ -19,6 +20,6 @@ dbo.bookings.staff_id = dbo.staff.staff_id
 LEFT JOIN dbo.offices
 ON
 dbo.offices.office_id = dbo.rooms.office_id
-WHERE dbo.offices.city = 'Johannesburg'
+WHERE dbo.offices.city = 'Pretoria'
 AND start_time > GETDATE()
 GO

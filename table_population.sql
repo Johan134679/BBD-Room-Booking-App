@@ -67,3 +67,4 @@ INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) V
 INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 6, 2, '2023-02-21T14:30:00', 60);
 INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 14, 3, '2023-02-24T09:30:00', 60);
 INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 2, 10, '2023-03-01T10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 9, 10, '2023-03-01T10:30:00', 30);
