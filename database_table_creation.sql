@@ -14,7 +14,8 @@ CREATE TABLE [dbo].[bookings](
     [description] [varchar](120) NOT NULL,
     [room_id] [int] NOT NULL,
     [staff_id] [int] NOT NULL,
-    [start_time] [datetime] NOT NULL,
+    [start_date] [date] NOT NULL,
+	[start_time] [time] NOT NULL,
     [duration] [int] NOT NULL
 );
 GO
@@ -25,8 +26,8 @@ GO
 
 CREATE TABLE [dbo].[staff](
 	[staff_id] [int] IDENTITY(1,1) NOT NULL,
-	[first_name] [varchar] (40) NOT NULL,
-	[last_name] [varchar] (40) NOT NULL,
+	[first_name] [varchar] (80) NOT NULL,
+	[last_name] [varchar] (80) NOT NULL,
 	[job_id] [int] NOT NULL
 );
 GO
@@ -37,7 +38,7 @@ GO
 
 CREATE TABLE [dbo].[jobs](
 	[job_id] [int] IDENTITY(1,1) NOT NULL,
-	[job_title] [varchar] (40) NOT NULL
+	[job_title] [varchar] (220) NOT NULL
 );
 GO
 
@@ -48,7 +49,7 @@ GO
 CREATE TABLE [dbo].[rooms](
 	[room_id] [int] IDENTITY(1,1) NOT NULL,
 	[office_id] [int] NOT NULL,
-	[room_name] [varchar] (40) NOT NULL,
+	[room_name] [varchar] (80) NOT NULL,
 	[room_type_id] [int] NOT NULL
 );
 GO
@@ -57,9 +58,9 @@ ALTER TABLE dbo.rooms
 ADD CONSTRAINT [PK_rooms] PRIMARY KEY CLUSTERED ([room_id] ASC);
 GO
 
-CREATE TABLE [dbo].[room_types](
+CREATE TABLE [dbo].[RoomTypes](
 	[room_type_id] [int] IDENTITY(1,1) NOT NULL,
-	[type] [varchar] (40) NOT NULL
+	[type] [varchar] (120) NOT NULL
 );
 GO
 
@@ -69,7 +70,7 @@ GO
 
 CREATE TABLE [dbo].[offices](
 	[office_id] [int] IDENTITY(1,1) NOT NULL,
-	[city] [varchar] (85) NOT NULL
+	[city] [varchar] (90) NOT NULL
 );
 GO
 
