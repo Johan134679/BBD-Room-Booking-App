@@ -9,7 +9,7 @@ INSERT INTO dbo.offices (city) VALUES ('Pune');
 INSERT INTO dbo.offices (city) VALUES ('London');
 INSERT INTO dbo.offices (city) VALUES ('Amsterdam');
 
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-1', 1);
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-1', 1); --1
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-2', 1);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-3', 1);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-4', 1);
@@ -17,25 +17,26 @@ INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '1-5', 2);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '2-1', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (1, '2-2', 3);
 
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (2, '1-1', 2);
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (2, '1-1', 2); --7
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (2, '1-2', 2);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (2, '1-3', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (2, '1-4', 3);
 
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '1-1', 1);
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '1-1', 1); --11
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '1-2', 1);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '2-1', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '2-2', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '3-1', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (3, '3-2', 3);
 
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (4, '1-1', 1);
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (4, '1-1', 1); --17
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (4, '1-2', 1);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (4, '2-1', 3);
 INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (4, '2-2', 3);
 
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (5, '1-1', 1);
-INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (6, '1-1', 1);
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (5, '1-1', 1); --21
+
+INSERT INTO dbo.rooms (office_id, room_name, room_type_id) VALUES (6, '1-1', 1); --22
 
 INSERT INTO dbo.jobs (job_title) VALUES ('SSE');
 INSERT INTO dbo.jobs (job_title) VALUES ('JSE');
@@ -60,11 +61,22 @@ INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Courtney', 'Cox',
 INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Matthew', 'Perry', 3);
 INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Cobie', 'Smulders', 2);
 INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Alyson', 'Hannigan', 2);
-INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Jason', 'Segel', 6);
+INSERT INTO dbo.staff (first_name, last_name, job_id) VALUES ('Jason', 'Segel', 6); --17
 
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 1, 1, '2023-02-22T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 1, 4, '2023-02-22T15:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 6, 2, '2023-02-21T14:30:00', 60);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 14, 3, '2023-02-24T09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 1, 1, '2023-03-05T14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 1, 4, '2023-03-06T15:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 18, 2, '2023-03-07T14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 4, 3, '2023-03-09T09:30:00', 60);
 INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 2, 10, '2023-03-01T10:30:00', 30);
-INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 9, 10, '2023-03-01T10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 5, 11, '2023-03-13T10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 22, 15, '2023-03-13T14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 12, 6, '2023-04-01T14:30:00', 60); --
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 1, 1, '2023-03-05T09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Stand-up', 21, 9, '2023-03-06T10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 6, 5, '2023-05-07T07:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Meeting', 4, 3, '2023-05-09T09:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 8, 10, '2023-06-01T10:30:00', 30);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Peer programming', 9, 11, '2023-06-01T10:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Conference call', 22, 15, '2023-05-01T14:30:00', 60);
+INSERT INTO dbo.bookings(description, room_id, staff_id, start_time, duration) VALUES ('Stand-up', 12, 6, '2023-04-01T14:30:00', 30);
+
