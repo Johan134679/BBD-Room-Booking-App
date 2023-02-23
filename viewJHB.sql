@@ -17,4 +17,5 @@ LEFT JOIN dbo.staff
 ON
 dbo.bookings.staff_id = dbo.staff.staff_id
 WHERE dbo.rooms.office_id = 1
+AND start_time > GETDATE()
 GO
