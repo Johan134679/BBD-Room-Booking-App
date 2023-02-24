@@ -110,4 +110,4 @@ INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time
 INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 23, 20, '2023-03-16', '10:00:00', 60);
 INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 23, 20, '2023-03-23', '08:00:00', 60);
 INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 23, 20, '2023-04-02', '12:00:00', 60);
-INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 23, 20, '2023-03-05', '14:00:00', 60);
+INSERT INTO dbo.bookings( description, room_id, staff_id, start_date, start_time, duration) VALUES ('Meeting', 36, 19, '2023-03-05', '14:00:00', 60);

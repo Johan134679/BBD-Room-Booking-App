@@ -181,7 +181,8 @@ first_name,
 last_name, 
 room_name, 
 start_date, 
-duration
+duration,
+city
 FROM dbo.bookings 
 LEFT JOIN dbo.rooms
 ON
